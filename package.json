@@ -1,0 +1,29 @@
+{
+  "name": "tarefo",
+  "version": "1.0.0",
+  "description": "Projeto criando um CRUD com qualidade!",
+  "main": "index.js",
+  "scripts": {
+    "start:crud": "npx ts-node .\\core\\crud.ts",
+    "dev:crud": "nodemon --ext ts,tsx --exec npm run start:crud",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonhowtf/tarefo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonhowtf/tarefo/issues"
+  },
+  "homepage": "https://github.com/tonhowtf/tarefo#readme",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
