@@ -1,0 +1,17 @@
+{
+  "todos": [
+    {
+      "id": "1753890605892",
+      "date": "2025-07-30T15:50:05.892Z",
+      "content": "Primeira TODO",
+      "done": false
+    },
+    {
+      "id": "1753890605895",
+      "date": "2025-07-30T15:50:05.895Z",
+      "content": "Segunda TODO",
+      "done": false
+    }
+  ],
+  "dogs": []
+}
