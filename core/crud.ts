@@ -15,7 +15,7 @@ interface Todo {
 
 function create(content: string): Todo {
     const todo = {
-        id: Date.now().toString(),
+        id: uuid(),
         date: new Date().toISOString(),
         content: content,
         done: false
@@ -44,12 +44,15 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
-function update(id: string, todo: Partial<Todo>) {
-    console.log(todo);
+function update(id: string, partialTodo: Partial<Todo>) {
     const todos = read();
     todos.forEach((currentTodo) => {
-
-    })
+        const isToUpdate = currentTodo.id === id;
+        if (isToUpdate) {
+            Object.assign(currentTodo, partialTodo)
+        }
+    });
+    console.log("TODOS ATUALIZADAS", todos)
 }
 
 function CLEAR_DB() {
@@ -60,10 +63,10 @@ function CLEAR_DB() {
 
 CLEAR_DB()
 
-const segundaTodo = create("Primeira TODO")
-const terceiraTodo = create("Segunda TODO")
-update(terceiraTodo.id, {
+const primeiraTodo = create("Primeira TODO")
+const segundaTodo = create("Segunda TODO")
+update(segundaTodo.id, {
     content: "Segunda TODO com novo content!"
 })
-console.log(read())
+
 
