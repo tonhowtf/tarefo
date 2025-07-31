@@ -1,17 +1,16 @@
 {
-  "todos": [
-    {
-      "id": "22634d88-04f9-461f-956e-a6ed615d5dae",
-      "date": "2025-07-30T23:49:02.689Z",
-      "content": "Primeira TODO",
-      "done": false
-    },
-    {
-      "id": "ee5a7bc9-72ab-4152-9739-a84f7c9d5259",
-      "date": "2025-07-30T23:49:02.691Z",
-      "content": "Segunda TODO",
-      "done": false
-    }
-  ],
-  "dogs": []
+    "todos": [
+        {
+            "id": "6a429961-001c-4351-8f9a-d739372eaf04",
+            "date": "2025-07-31T00:33:07.638Z",
+            "content": "Primeira TODO",
+            "done": false
+        },
+        {
+            "id": "d6544361-0313-4fd6-88c7-fe4ef24a4289",
+            "date": "2025-07-31T00:33:07.641Z",
+            "content": "Segunda TODO com novo content!",
+            "done": false
+        }
+    ]
 }
