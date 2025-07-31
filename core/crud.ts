@@ -26,12 +26,10 @@ function create(content: string): Todo {
         todo,
     ];
 
-    console.log(todo)
-    // salvar o content no sistema
     fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
         todos,
-        dogs: [],
     }, null, 2));
+
     return todo;
 }
 
@@ -74,12 +72,32 @@ function updateContentById(id: string, content: string): Todo {
     })
 }
 
+function deletebyId(id: string) {
+    const todos = read();
+
+    const todosWithoutOne = todos.filter((todo) => {
+        if (id === todo.id) {
+            return false;
+        }
+
+        return true;
+    });
+
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
+        todos: todosWithoutOne,
+    }, null, 4));
+
+}
+
 
 CLEAR_DB()
 
-create("Primeira TODO")
-const segundaTodo = create("Segunda TODO")
-updateContentById(segundaTodo.id, "Atualizada!")
-console.log(read());
+create("Primeira TODO");
+const segundaTodo = create("Segunda TODO");
+create("Terceira TODO")
+deletebyId(segundaTodo.id);
+const todos = read();
+console.log(todos);
+console.log(todos.length);
 
 
